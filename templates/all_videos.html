@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{ kwargs }}
+
+
+<form action="/feedme/filter_test/" method="post">
+{#    {% csrf_token %}#}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+<h1>HAHAHA</h1>
+
+
+
+{% for v in videos %}
+        <div>
+                <h3>{{ v.id }}--{{ v.title }}</h3>
+
+        </div>
+{% endfor %}
+
+</body>
+</html>
