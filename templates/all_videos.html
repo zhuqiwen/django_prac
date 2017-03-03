@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 </head>
 <body>
-
 {{ kwargs }}
-
-
 <form action="/feedme/filter_test/" method="post">
 {#    {% csrf_token %}#}
     {{ form }}
     <input type="submit" value="Submit" />
 </form>
-
 <h1>HAHAHA</h1>
-
-
-
 {% for v in videos %}
         <div>
                 <h3>{{ v.id }}--{{ v.title }}</h3>
-
+                <br>Created time: {{v.created}}
         </div>
 {% endfor %}
 
+{# the following is just a trial for jquery datepicker#}
+<script>
+$(document).ready(function() {
+    $('.datepicker').datepicker();
+});
+</script>
 </body>
-</html>
