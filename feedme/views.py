@@ -10,6 +10,7 @@ def filter_test(request):
         form = TitleForm(request.POST)
         # kwargs = dict(request.POST)
         kwargs = {x:request.POST.get(x) for x in request.POST.keys() if request.POST.get(x) is not ''}
+
         # kwargs = {'title__icontains':'Blanditiis'}
         videos = video.objects.filter(**kwargs)
     else:
