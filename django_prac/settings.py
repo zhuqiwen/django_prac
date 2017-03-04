@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'feedme',
     'django_seed',
+    'rest_framework',
 
 ]
 

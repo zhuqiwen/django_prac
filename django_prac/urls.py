@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^feedme/$', fm_views.show_all_videos),
     url(r'^feedme/filter_test', fm_views.filter_test),
+    url(r'^feedme/filter_api_test', fm_views.json_all_videos),
 ]
